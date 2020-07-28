@@ -25,13 +25,15 @@ export default {
   name: "Cat"
 };
 </script>
-<style scoped>
+<style lang="scss" scoped>
+$width:100%;
+$height:100%;
 #Cat {
   position: absolute;
-  background-color: rgb(94, 165, 146);
+  background-color: rgb(47, 197, 172);
   top: 0;
-  width: 100%;
-  height: 100%;
+  width: $width;
+  height: $height;
   overflow: hidden;
   cursor: normal;
 }
@@ -39,12 +41,19 @@ export default {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
+  >.content{
+    font-size: 10rem;
+    cursor: url(../assets/logo.png), auto;
+  }
 }
-.content {
-  font-size: 10rem;
-}
+
 #contents:hover {
   color: rgb(231, 236, 178);
   transition: 0.5s ease-out linear;
+}
+@media(max-width: 440px){
+  .content{
+    font-size: 1rem;
+  }
 }
 </style>

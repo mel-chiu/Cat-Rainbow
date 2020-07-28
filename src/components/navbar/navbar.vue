@@ -16,7 +16,7 @@ export default Vue.extend({
   name: "navbar"
 });
 </script>
-<style scoped>
+<style lang="scss" scoped>
 #Navbar {
   position: fixed;
   display: flex;
@@ -32,11 +32,12 @@ export default Vue.extend({
   margin-top: 10px;
   color: #ccc;
   font-family: 'Red Rose', cursive;
-}
-#links>a{
+  >a{
     text-decoration: none;
     color: #ccc;
     margin: 0 4px;
     font-family: 'Red Rose', cursive;
+  }
 }
+
 </style>
