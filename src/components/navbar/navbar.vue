@@ -4,17 +4,19 @@
       <img src="../../assets/logo.png" />
     </div>
     <div id="links">
-      <router-link to="/">Cat</router-link>||
-      <router-link to="/rainbow">Rainbow</router-link>
+      <router-link class="router" to="/">Cat</router-link>||
+      <router-link class="router" to="/rainbow">Rainbow</router-link>
+
+      <div id="dark-mode">
+        <img src="../../assets/bulb-dark.png" />
+      </div>
     </div>
   </div>
 </template>
 <script lang="ts">
-import Vue from "vue";
-
-export default Vue.extend({
-  name: "navbar"
-});
+import { Vue, Component } from "vue-property-decorator";
+@Component
+export default class Navbar extends Vue {}
 </script>
 <style lang="scss" scoped>
 #Navbar {
@@ -31,13 +33,17 @@ export default Vue.extend({
   right: 50px;
   margin-top: 10px;
   color: #ccc;
-  font-family: 'Red Rose', cursive;
-  >a{
+  font-family: "Red Rose", cursive;
+  > .router {
     text-decoration: none;
     color: #ccc;
     margin: 0 4px;
-    font-family: 'Red Rose', cursive;
+    font-family: "Red Rose", cursive;
+  }
+
+  > #dark-mode {
+    display: block;
+    cursor: pointer;
   }
 }
-
 </style>

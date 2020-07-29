@@ -20,14 +20,17 @@
 </template>
 
 <script lang="ts">
-import Vue from 'vue'
-export default {
-  name: "Cat"
-};
+import {Vue, Component} from 'vue-property-decorator';
+
+@Component
+export default class Cat extends Vue{
+
+  
+}
 </script>
 <style lang="scss" scoped>
-$width:100%;
-$height:100%;
+@import "../styles/_variables.scss";
+
 #Cat {
   position: absolute;
   background-color: rgb(47, 197, 172);

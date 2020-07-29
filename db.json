@@ -1,0 +1,49 @@
+{
+  "cats":[
+      {
+          "id":0,
+          "name": "Black Cat",
+          "url":"shorturl.at/lrEJQ"
+      },
+      {
+          "id":1,
+          "name": "White Cat",
+          "url":"shorturl.at/kpCJO"
+      },
+      {
+          "id":2,
+          "name": "Red Cat",
+          "url":"shorturl.at/kzTX8"
+      },
+      {
+          "id":3,
+          "name": "Orange Cat",
+          "url":"shorturl.at/kpzAD"
+      },
+      {
+          "id":4,
+          "name": "Yellow Cat",
+          "url":"shorturl.at/blOSZ"
+      },
+      {
+          "id":5,
+          "name": "Green Cat",
+          "url":"shorturl.at/moCY9"
+      },
+      {
+          "id":6,
+          "name": "Blue Cat",
+          "url":"shorturl.at/yIJX2"
+      },
+      {
+          "id":7,
+          "name": "Grey Cat",
+          "url":"shorturl.at/cirt2"
+      },
+      {
+          "id":8,
+          "name": "Purple Cat",
+          "url":"shorturl.at/jwGWY"
+      }
+  ]
+}
