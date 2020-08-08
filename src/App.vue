@@ -27,5 +27,8 @@ export default Vue.extend({
   color: #4a4f55;
   font-family: 'Fjalla One', sans-serif;
 }
+.dark-mode{
+ color: cornsilk;
+}
 
 </style>
