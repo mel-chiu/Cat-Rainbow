@@ -1,38 +1,27 @@
 <template>
   <div class="container">
     <div class="ears">
-      <div class="ear" id="left-ear">
-        <div class="inside-ear"></div>
-      </div>
-      <div class="ear" id="right-ear">
+      <div v-for="ear in eyesOrEars" :key="ear.key" class="ear" :id="ear.earid">
         <div class="inside-ear"></div>
       </div>
     </div>
     <div class="whiskers">
-      <div id="whisker-left">
-        <div class="whisker"></div>
-        <div class="whisker"></div>
-        <div class="whisker"></div>
+      <div  id="whisker-left">
+        <div v-for= "whisker in counts" :key="whisker.key" class="whisker"></div>
       </div>
       <div id="whisker-right">
-        <div class="whisker"></div>
-        <div class="whisker"></div>
-        <div class="whisker"></div>
+        <div v-for= "whisker in counts" :key="whisker.key" class="whisker"></div>
       </div>
     </div>
     <div class="head">
       <div class="pattern">
-        <div class="tabby"></div>
-        <div class="tabby"></div>
-        <div class="tabby"></div>
+        <div v-for= "tabby in counts" :key="tabby.key"  class="tabby"></div>
       </div>
       <div class="eyes">
-        <div class="eye" id="left-eye">
+        <div v-for="eye in eyesOrEars" :key="eye.key" class="eye" :id="eye.eyeid">
           <div class="iris"></div>
         </div>
-        <div class="eye" id="right-eye">
-          <div class="iris"></div>
-        </div>
+        
       </div>
       <div class="nose"></div>
       <div class="mouth">
@@ -43,10 +32,29 @@
   </div>
 </template>
 <script lang="ts">
-import Vue from "vue";
-export default Vue.extend({
-  name: "CatFace",
-});
+import {Vue, Component} from 'vue-property-decorator';
+
+@Component
+export default class CatFace extends Vue{
+  private counts = [
+          {key: 1},
+          {key: 2},
+          {key: 3}
+  ]
+  private eyesOrEars = [
+      {
+          key: 1,
+          eyeid: "left-eye",
+          earid: "left-ear"
+      },
+      {
+          key: 2,
+          eyeid: "right-eye",
+          earid: "right-ear"
+      }
+  ]
+
+  }
 </script>
 <style lang="scss" scoped>
 @import "../styles/_variables.scss";
