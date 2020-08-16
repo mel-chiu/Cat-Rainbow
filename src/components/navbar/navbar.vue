@@ -7,7 +7,7 @@
       <router-link class="router" to="/">Cat</router-link>||
       <router-link class="router" to="/rainbow">Rainbow</router-link>
 
-      <div id="dark-mode">
+      <div id="dark-mode" @click="dark = !dark" >
         <img src="../../assets/bulb-dark.png" />
       </div>
     </div>
@@ -15,8 +15,14 @@
 </template>
 <script lang="ts">
 import { Vue, Component } from "vue-property-decorator";
+
+
 @Component
-export default class Navbar extends Vue {}
+export default class Navbar extends Vue {
+  get dark() {
+    return this.$store.state.dark;
+  } 
+}
 </script>
 <style lang="scss" scoped>
 #Navbar {
